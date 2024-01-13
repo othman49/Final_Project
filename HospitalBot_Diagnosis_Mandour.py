@@ -271,8 +271,7 @@ import numpy as np
 from sklearn.metrics import confusion_matrix, roc_curve, auc
 from sklearn.preprocessing import label_binarize
 
-# ... [Your existing code above] ...
-# Enhanced Feature Importance Plot
+#  Feature Importance Plot
 def plot_feature_importances(model, features):
     importances = model.feature_importances_
     indices = np.argsort(importances)[::-1]
@@ -286,7 +285,7 @@ def plot_feature_importances(model, features):
     plt.tight_layout()
     plt.show()
 
-# Enhanced Confusion Matrix Plot
+#  Confusion Matrix Plot
 def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap='Blues'):
     plt.figure(figsize=(10, 8))
     sns.heatmap(cm, annot=True, fmt=".0f", cmap=cmap, cbar=True,
